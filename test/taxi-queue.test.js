@@ -1,5 +1,47 @@
 describe('The taxi queue app', function() {
 
+	it ('should be able to initialize the people queue length to a specific value and allow 3 people to join the queue', function() {
+
+		const taxiQueue = TaxiQueue(12);
+
+		taxiQueue.joinQueue();
+		taxiQueue.joinQueue();
+		taxiQueue.joinQueue();
+
+		assert.equal(15, taxiQueue.queueLength());
+	});
+
+	it ('should be able to initialize the people and taxi queue length to a specific values and allow 1 taxi to queue', function() {
+
+		const taxiQueue = TaxiQueue(10, 2);
+
+		taxiQueue.joinTaxiQueue();
+
+		assert.equal(10, taxiQueue.queueLength());
+		assert.equal(3, taxiQueue.taxiQueueLength());
+	});
+
+
+	
+	it ('should be able to initialize the people and taxi queue length to a specific values and allow 2 taxis to queue and 4 people to 4 leave the queue', function() {
+
+		const taxiQueue = TaxiQueue(5, 2);
+
+		taxiQueue.leaveQueue();
+		taxiQueue.leaveQueue();
+		taxiQueue.leaveQueue();
+		taxiQueue.leaveQueue();
+		taxiQueue.joinTaxiQueue();
+		taxiQueue.joinTaxiQueue();
+
+		assert.equal(1, taxiQueue.queueLength());
+		assert.equal(4, taxiQueue.taxiQueueLength());
+	});
+
+
+	
+
+
 	it ('should allow people to join the queue', function() {
 
 		const taxiQueue = TaxiQueue();
