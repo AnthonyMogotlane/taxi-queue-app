@@ -10,9 +10,14 @@ function TaxiQueue(queue, taxiQueue) {
 			theQueue--;
 		}
 	}
-	
 	//increment taxi queue count
 	const joinTaxiQueue = () => theTaxiQueue++;
+	//decrement the count when a person leave the queue
+	const leaveTaxiQueue = () => {
+		if(theTaxiQueue > 0) {
+			theTaxiQueue--;
+		}
+	}
 
 	//get the length of the people on the queue
 	const queueLength = () => theQueue;
@@ -33,6 +38,7 @@ function TaxiQueue(queue, taxiQueue) {
 		joinQueue,
 		leaveQueue,
 		joinTaxiQueue,
+		leaveTaxiQueue,
 		queueLength,
 		taxiQueueLength,
 		taxiDepart
