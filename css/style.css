@@ -66,6 +66,10 @@ button {
 	font-weight: bold;
 }
 
+.leave_taxi_queue {
+	margin-top: 2px;
+}
+
 .depart_container {
 	visibility: hidden;
 }
@@ -79,6 +83,7 @@ li {
 }
 
 .msg {
+	display: none;
 	background: red;
 	color: white;
 	padding: .3em;
