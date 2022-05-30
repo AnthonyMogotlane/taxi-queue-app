@@ -69,9 +69,9 @@ counterTemplate(taxiQueue.taxiQueueLength(), ".taxi_content", ".taxi_container")
 //message {}
 function message () {
     if(taxiQueue.queueLength() < 12) {
-        return `<span class="red">No taxis to transport<span>`;
-    } else if(taxiQueue.taxiQueueLength() === 0) {
         return `<span class="red">Not enough people<span>`;
+    } else if(taxiQueue.taxiQueueLength() === 0) {
+        return `<span class="red">No taxis to transport<span>`;
     } else {
         return `<span class="green">Taxi Departed<span>`;
     }
