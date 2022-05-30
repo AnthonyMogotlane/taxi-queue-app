@@ -84,9 +84,20 @@ li {
 
 .msg {
 	display: none;
-	background: red;
 	color: white;
 	padding: .3em;
+	border-radius: .25em;
+}
+
+.red {
+	background: red;
+	padding: .3em;
+	border-radius: .25em;
+}
+.green {
+	background: green;
+	padding: .3em;
+	width: 100%;
 	border-radius: .25em;
 }
 
