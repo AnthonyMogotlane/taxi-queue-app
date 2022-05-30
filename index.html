@@ -23,23 +23,17 @@
 				<img src="img/queue.png" alt="" width="100">
 				<img src="img/queue.png" alt="" width="100">
 				<div class="passenger_container count_container"></div>
-				<script type="text/x-handlebars-template" class="passenger_content">
-				<span class="passenger_queue_count count">{{counter}}</span>
-			</script>
 				<button class="join_queue">Join</button>
 				<button class="leave_queue">Leave</button>
-
+				
 			</div>
-
+			
 			<div class="section">
 				<h2>Taxis</h2>
 				<img src="img/minivan.png" alt="" width="100">
 				<img src="img/minivan.png" alt="" width="100">
 				<img src="img/minivan.png" alt="" width="100">
 				<div class="taxi_container count_container"></div>
-				<script type="text/x-handlebars-template" class="taxi_content">
-				<span class="taxi_queue_count count">{{counter}}</span>
-			</script>
 				<button class="join_taxi_queue">Join queue</button>
 				<button class="leave_taxi_queue">leave queue</button>
 			</div>
@@ -58,7 +52,7 @@
 
 
 		</div>
-
+		
 		<div class="footer">
 			<h4>Icons used</h4>
 			<ul>
@@ -73,9 +67,15 @@
 				</li>
 			</ul>
 		</div>
-
+		
 	</div>
 
+	<script type="text/x-handlebars-template" class="passenger_content">
+	<span class="passenger_queue_count count">{{counter}}</span>
+	</script>
+	<script type="text/x-handlebars-template" class="taxi_content">
+		<span class="taxi_queue_count count">{{counter}}</span>
+	</script>
 	<script src="/js/taxi-queue.js"></script>
 	<script src="js/taxi-queue.dom.js"></script>
 </body>
