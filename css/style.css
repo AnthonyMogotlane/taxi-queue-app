@@ -4,9 +4,41 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
+	position: relative;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: darkgray
+	background: url("../img/taxis.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	min-height: 100vh;
+}
+
+body::after {
+	position: absolute;
+	content: "";
+	background-color: darkgray;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: .85;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em 0;
+}
+
+/* header title */
+.container > h1 {
+	text-transform: uppercase;
+	text-align: center;
+	margin: auto;
 }
 
 .count_container {
@@ -32,6 +64,25 @@ button {
 	padding: 1em;
 	border-radius: 0.5em;
 	font-weight: bold;
+}
+
+.depart_container {
+	visibility: hidden;
+}
+
+li {
+	list-style: none;
+}
+
+.footer {
+	margin: 1em;
+}
+
+.msg {
+	background: red;
+	color: white;
+	padding: .3em;
+	border-radius: .25em;
 }
 
 @media (min-width: 768px) {
